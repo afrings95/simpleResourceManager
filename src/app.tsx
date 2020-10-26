@@ -10,9 +10,11 @@ document.body.appendChild(mainElement);
 function App() {
   return (
     <div className='App'>
-      <Provider>
-        <MainPage />
-      </Provider>
+      <React.StrictMode>
+        <Provider>
+          <MainPage />
+        </Provider>
+      </React.StrictMode>
     </div>
   );
 }

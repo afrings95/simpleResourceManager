@@ -1,0 +1,16 @@
+.select-file-dialog {
+  .select-file-dialog-title {
+    text-align: center;
+  }
+
+  .select-file-dialog-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 32px 0px 16px;
+
+    .select-file-dialog-footer-button {
+      width: 128px;
+    }
+  }
+}

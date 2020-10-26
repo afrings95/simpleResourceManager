@@ -18,7 +18,29 @@ module.exports = {
           loader: "babel-loader",
         },
       },
+      {
+        test: /\.scss$/,
+        exclude: /node_modules/,
+        use: [
+            {
+                loader: 'style-loader',
+            },
+            {
+                loader: 'css-loader',
+                options: {
+                    sourceMap: true,
+                },
+            },
+            {
+                loader: 'sass-loader',
+                options: {
+                    sourceMap: true,
+                },
+            },
+        ],
+      }
     ],
+    
   },
   devServer: {
     contentBase: path.join(__dirname, "../dist/renderer"),
@@ -33,4 +55,5 @@ module.exports = {
     filename: "js/[name].js",
   },
   plugins: [new HtmlWebpackPlugin()],
+  
 };
